@@ -16,7 +16,7 @@ export class FirstComponent implements OnInit {
     this.isHidden = !this.isHidden;
     this.buttonMessage === 'hide' ? this.buttonMessage = 'show' : this.buttonMessage = 'hide';
   }
-  alertInputValue(inputValue: string) {
+  alertInputValue(inputValue: string): void {
     alert(inputValue);
   }
 }

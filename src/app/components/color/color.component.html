@@ -1,0 +1,12 @@
+<div [style.backgroundColor]="bgcolor">Color component</div>
+
+<input
+  (change)="changeColor(colorInput.value)"
+  #colorInput
+  type="text"
+  class="form-control"
+/>
+
+<button (click)="changeColor(defaultColor)" class="btn btn-danger">
+  Reset
+</button>
