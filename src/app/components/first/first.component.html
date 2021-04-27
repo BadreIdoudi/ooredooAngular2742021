@@ -1,8 +1,15 @@
-<p [style.color]="'yellow'" [hidden]="isHidden">first works!</p>
+<p
+  (mouseenter)="alertInputValue(monInput.value)"
+  [style.color]="'yellow'"
+  [hidden]="isHidden"
+>
+  first works!
+</p>
 <button (click)="showHide()" class="btn btn-primary">
-  {{buttonMessage}}
+  {{ buttonMessage }}
 </button>
 <hr />
 In first component i said {{ message }}
+<input type="text" #monInput />
 <app-second></app-second>
 <hr />
