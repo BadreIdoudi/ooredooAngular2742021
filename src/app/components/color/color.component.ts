@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-color',
@@ -6,11 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./color.component.css'],
 })
 export class ColorComponent implements OnInit {
-  defaultColor = 'blue';
-  bgcolor = this.defaultColor;
+  @Input() defaultColor = 'blue';
+  bgcolor = 'red';
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.bgcolor = this.defaultColor;
+  }
   changeColor(newColor: string): void {
     this.bgcolor = newColor;
   }
