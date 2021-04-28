@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-first',
@@ -9,14 +10,20 @@ export class FirstComponent implements OnInit {
   message = 'cc';
   isHidden = false;
   buttonMessage = 'hide';
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
   showHide(): void {
     this.isHidden = !this.isHidden;
-    this.buttonMessage === 'hide' ? this.buttonMessage = 'show' : this.buttonMessage = 'hide';
+    this.buttonMessage === 'hide'
+      ? (this.buttonMessage = 'show')
+      : (this.buttonMessage = 'hide');
   }
   alertInputValue(inputValue: string): void {
     alert(inputValue);
+  }
+
+  navigate(): void {
+    this.router.navigate(['/cv']);
   }
 }

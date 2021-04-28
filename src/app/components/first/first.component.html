@@ -1,5 +1,4 @@
 <p
-  (mouseenter)="alertInputValue(monInput.value)"
   [style.color]="'yellow'"
   [hidden]="isHidden"
 >
@@ -13,3 +12,8 @@ In first component i said {{ message }}
 <input type="text" #monInput />
 <app-second></app-second>
 <hr />
+<button
+  (click)="navigate()"
+  class="btn btn-dark">
+  My Cvtech
+</button>
