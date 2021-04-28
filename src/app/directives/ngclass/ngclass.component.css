@@ -1,0 +1,15 @@
+.allumee {
+  border: 2px solid black;
+  background-color: yellow;
+  color: black;
+  width: 150px;
+  height: 150px;
+}
+
+.eteinte {
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  width: 150px;
+  height: 150px;
+}

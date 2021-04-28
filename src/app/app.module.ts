@@ -15,6 +15,9 @@ import { CvComponent } from './cv/cv/cv.component';
 import { ListComponent } from './cv/list/list.component';
 import { DetailComponent } from './cv/detail/detail.component';
 import { ItemComponent } from './cv/item/item.component';
+import { NgstyleComponent } from './directives/ngstyle/ngstyle.component';
+import { MiniwordComponent } from './directives/miniword/miniword.component';
+import { NgclassComponent } from './directives/ngclass/ngclass.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,9 @@ import { ItemComponent } from './cv/item/item.component';
     ListComponent,
     DetailComponent,
     ItemComponent,
+    NgstyleComponent,
+    MiniwordComponent,
+    NgclassComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
