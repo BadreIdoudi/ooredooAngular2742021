@@ -1,11 +1,12 @@
 <ol class="list-group">
-  <li class="list-group-item">
-    <app-item (selectCv)="forwardItem($event)" [cv]="cvs[0]"></app-item>
+  <li
+    *ngFor= "let actualCv of cvs; let isOdd = odd"
+    [ngClass]="{
+      'list-group-item-warning': isOdd,
+      'list-group-item-danger': !isOdd
+    }"
+    class="list-group-item" >
+    <app-item (selectCv)="forwardItem($event)" [cv]="actualCv"></app-item>
   </li>
-  <li class="list-group-item">
-    <app-item (selectCv)="forwardItem($event)" [cv]="cvs[1]"></app-item>
-  </li>
-  <li class="list-group-item">
-    <app-item (selectCv)="forwardItem($event)" [cv]="cvs[2]"></app-item>
-  </li>
+
 </ol>

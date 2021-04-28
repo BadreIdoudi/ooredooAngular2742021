@@ -18,6 +18,8 @@ import { ItemComponent } from './cv/item/item.component';
 import { NgstyleComponent } from './directives/ngstyle/ngstyle.component';
 import { MiniwordComponent } from './directives/miniword/miniword.component';
 import { NgclassComponent } from './directives/ngclass/ngclass.component';
+import { HighlightDirective } from './directives/highlight.directive';
+import { RainbowDirective } from './directives/rainbow.directive';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { NgclassComponent } from './directives/ngclass/ngclass.component';
     NgstyleComponent,
     MiniwordComponent,
     NgclassComponent,
+    HighlightDirective,
+    RainbowDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
