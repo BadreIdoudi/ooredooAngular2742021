@@ -18,7 +18,7 @@ export class ListComponent implements OnInit {
         'sellaouti',
         'aymen',
         'teacher',
-        'rotating_card_profile2.png',
+        '                       ',
         38,
         1234
       ),
@@ -27,7 +27,7 @@ export class ListComponent implements OnInit {
         'chaouachi',
         'amira',
         'Dev',
-        'rotating_card_profile.png',
+        '',
         22,
         1258
       ),
