@@ -7,15 +7,15 @@ import { ColorComponent } from './components/color/color.component';
 import { FirstComponent } from './components/first/first.component';
 import { SecondComponent } from './components/second/second.component';
 
-// word
+// cv
 
 const routes: Routes = [
-  { path: ':monPath', component: SecondComponent },
   { path: '', component: FirstComponent },
   { path: 'cv', component: CvComponent },
   { path: 'todo', component: TodoComponent },
   { path: 'word', component: MiniwordComponent },
-  { path: 'color', component: ColorComponent },
+  { path: 'color/:defaultColor', component: ColorComponent },
+  { path: ':monPath', component: SecondComponent },
 ];
 
 @NgModule({
