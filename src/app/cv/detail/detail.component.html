@@ -50,17 +50,9 @@
         </div>
       </div>
       <div class="footer">
-        <div class="social-links text-center">
-          <a href="https://creative-tim.com" class="facebook"
-            ><i class="fa fa-facebook fa-fw"></i
-          ></a>
-          <a href="https://creative-tim.com" class="google"
-            ><i class="fa fa-google-plus fa-fw"></i
-          ></a>
-          <a href="https://creative-tim.com" class="twitter"
-            ><i class="fa fa-twitter fa-fw"></i
-          ></a>
-        </div>
+        <a [routerLink]="['/cv', cv.id]" class="btn btn-danger">
+          Détail
+        </a>
       </div>
     </div>
     <!-- end back panel -->
