@@ -7,17 +7,19 @@ import { ColorComponent } from './components/color/color.component';
 import { FirstComponent } from './components/first/first.component';
 import { SecondComponent } from './components/second/second.component';
 import { DetailPersonneComponent } from './cv/detail-personne/detail-personne.component';
+import { NF404Component } from './components/nf404/nf404.component';
 
 // cv
 
 const routes: Routes = [
-  { path: '', component: FirstComponent },
+  { path: '', redirectTo: 'cv', pathMatch: 'full' },
   { path: 'cv', component: CvComponent },
   { path: 'cv/:id', component: DetailPersonneComponent },
   { path: 'todo', component: TodoComponent },
   { path: 'word', component: MiniwordComponent },
   { path: 'color/:defaultColor', component: ColorComponent },
   { path: ':monPath', component: SecondComponent },
+  { path: '**', component: NF404Component },
 ];
 
 @NgModule({

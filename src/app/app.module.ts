@@ -31,6 +31,8 @@ import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
 import { TodoComponent } from './todo/todo/todo.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DetailPersonneComponent } from './cv/detail-personne/detail-personne.component';
+import { NF404Component } from './components/nf404/nf404.component';
+import { TestFormComponent } from './components/test-form/test-form.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +58,8 @@ import { DetailPersonneComponent } from './cv/detail-personne/detail-personne.co
     TodoComponent,
     HeaderComponent,
     DetailPersonneComponent,
+    NF404Component,
+    TestFormComponent,
   ],
   imports: [
     BrowserModule,
