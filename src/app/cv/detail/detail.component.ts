@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Cv } from '../model/cv';
+import { CvService } from '../services/cv.service';
+import { distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
   selector: 'app-detail',
@@ -8,7 +10,18 @@ import { Cv } from '../model/cv';
 })
 export class DetailComponent implements OnInit {
   @Input() cv: Cv = null;
-  constructor() {}
+  constructor(
+    private cvService: CvService
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.cvService.selectItemSubject.pipe(
+      distinctUntilChanged()
+    ).subscribe(
+      (newCv) => {
+        this.cv = newCv;
+        console.log(newCv);
+      }
+    )
+  }
 }

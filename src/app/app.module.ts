@@ -33,6 +33,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { DetailPersonneComponent } from './cv/detail-personne/detail-personne.component';
 import { NF404Component } from './components/nf404/nf404.component';
 import { TestFormComponent } from './components/test-form/test-form.component';
+import { LoginComponent } from './pages/login/login.component';
+import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
+import { TestObservableComponent } from './components/test-observable/test-observable.component';
+import { SliderComponent } from './components/slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +64,10 @@ import { TestFormComponent } from './components/test-form/test-form.component';
     DetailPersonneComponent,
     NF404Component,
     TestFormComponent,
+    LoginComponent,
+    AddPersonneComponent,
+    TestObservableComponent,
+    SliderComponent,
   ],
   imports: [
     BrowserModule,

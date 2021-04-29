@@ -1,13 +1,16 @@
 <div class="row">
   <div class="col">
+    <div class="alert alert-info">
+      Le nombre de click sur les items est : {{nbre}}
+    </div>
     <div class="alert alert-success">
       {{ date | date: "full" | uppercase }}
       <!--       <p>{{ 5 | btcToUsd }}</p>
       <p>{{ 5 | btcToUsd: false }}</p> -->
     </div>
-    <app-list (forwardCv)="getSelectedCv($event)"></app-list>
+    <app-list></app-list>
   </div>
   <div class="col">
-    <app-detail [cv]="selectedCv"></app-detail>
+    <app-detail></app-detail>
   </div>
 </div>
