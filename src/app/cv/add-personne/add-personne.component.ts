@@ -18,10 +18,17 @@ export class AddPersonneComponent implements OnInit {
 
   ngOnInit(): void {}
   addPersonne(formumaire: NgForm): void {
-    this.cvService.addCv(formumaire.value);
-    this.toaster.success(
-      `le cv de ${formumaire.value.firstname} ${formumaire.value.name} a été ajouté avec succès `
+    this.cvService.addCv(formumaire.value).subscribe(
+      (cv) => {
+        this.toaster.success(
+          `le cv de ${formumaire.value.firstname} ${formumaire.value.name} a été ajouté avec succès `
+        );
+        this.router.navigate(['cv']);
+      },
+      (erreur) => {
+        this.toaster.error('pbm avec le serveur veuillez contacter l admin');
+        console.log(erreur);
+      }
     );
-    this.router.navigate(['cv']);
   }
 }

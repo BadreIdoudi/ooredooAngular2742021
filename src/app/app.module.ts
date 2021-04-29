@@ -37,6 +37,7 @@ import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
 import { TestObservableComponent } from './components/test-observable/test-observable.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { TestHttpComponent } from './components/test-http/test-http.component';
+import { AUTH_INTERCEPTOR_PROVIDER } from './interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -78,7 +79,7 @@ import { TestHttpComponent } from './components/test-http/test-http.component';
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
   ],
-  providers: [],
+  providers: [AUTH_INTERCEPTOR_PROVIDER],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

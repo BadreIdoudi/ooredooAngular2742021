@@ -8,13 +8,14 @@ import { DetailPersonneComponent } from './cv/detail-personne/detail-personne.co
 import { NF404Component } from './components/nf404/nf404.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
+import { AuthGuard } from './guards/auth.guard';
 
 // cv
 
 const routes: Routes = [
   { path: '', redirectTo: 'cv', pathMatch: 'full' },
   { path: 'cv', component: CvComponent },
-  { path: 'cv/add', component: AddPersonneComponent },
+  { path: 'cv/add', component: AddPersonneComponent, canActivate: [AuthGuard] },
   { path: 'cv/:id', component: DetailPersonneComponent },
   { path: 'todo', component: TodoComponent },
   { path: 'word', component: MiniwordComponent },

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { Cv } from '../model/cv';
 import { CvService } from '../services/cv.service';
 
@@ -10,10 +11,19 @@ import { CvService } from '../services/cv.service';
 export class ListComponent implements OnInit {
   cvs: Cv[] = [];
 /*   @Output() forwardCv = new EventEmitter(); */
-  constructor(private cvService: CvService) {}
+  constructor(
+    private cvService: CvService,
+    private toaster: ToastrService
+  ) {}
 
   ngOnInit(): void {
-    this.cvs = this.cvService.getCvs();
+    this.cvService.getCvs().subscribe(
+      (cvs) => this.cvs = cvs,
+      (erreur) => {
+        this.cvs = this.cvService.getFakeCvs();
+        this.toaster.warning('Les data sont fake, veuillez contacter l admin');
+      }
+    );
   }
 /*   forwardItem(cv: Cv): void {
     this.forwardCv.emit(cv);
