@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 
 import { ToastrModule } from 'ngx-toastr';
-
-
 
 import { AppComponent } from './app.component';
 import { FirstComponent } from './components/first/first.component';
@@ -37,6 +36,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
 import { TestObservableComponent } from './components/test-observable/test-observable.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { TestHttpComponent } from './components/test-http/test-http.component';
 
 @NgModule({
   declarations: [
@@ -68,11 +68,13 @@ import { SliderComponent } from './components/slider/slider.component';
     AddPersonneComponent,
     TestObservableComponent,
     SliderComponent,
+    TestHttpComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
   ],
